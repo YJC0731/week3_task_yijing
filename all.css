@@ -14,7 +14,7 @@
 /* base */ 
 *, *::after,*::before{
     box-sizing:border-box;
-    outline:solid 1px; /*格線檢視*/
+    /*outline:solid 1px; 格線檢視*/
 }
 
 .body{
@@ -274,10 +274,6 @@ img{
   .footer .copyright-list a:hover {
     color: var(--secondary);
 }
-
-
-
-
 
   @media (max-width: 767px) {
      /* 傑利助教：767px以下轉為手機版，建議使用在元素較多的內容上，例如此次設計稿的 footer*/
