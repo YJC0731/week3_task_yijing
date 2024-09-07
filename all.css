@@ -260,7 +260,7 @@ img{
     box-shadow: 0px 0px 10px 3px rgba(251, 242, 242, 0.9);
     border-radius: 25px;
   }
-  
+
   
   .footer .copyright-list {
     gap: 48px;
@@ -274,6 +274,10 @@ img{
   .footer .copyright-list a:hover {
     color: var(--secondary);
 }
+
+
+
+
 
   @media (max-width: 767px) {
      /* 傑利助教：767px以下轉為手機版，建議使用在元素較多的內容上，例如此次設計稿的 footer*/
@@ -306,28 +310,29 @@ img{
     .footer .social-list img {
       width: 24px;
     }
-  
-    .footer .copyright {
-      flex-direction: column;
-      gap: 8px;
-    }
 
     .copyright-text{
         margin-bottom: 8px;
       }
-  
-    .footer .copyright-list {
-      flex-direction: column;
-      align-items: start;
-      gap: 8px;
-    }
-  
-    .footer .copyright-list a {
-        font-size: 16px;
-    }
 
-    .footer .copyright-list a:hover {
+
+    .footer .copyright {
+        flex-direction: column;
+        gap: 8px;
+      }
+    
+      .footer .copyright-list {
+        flex-direction: column;
+        align-items: start;
+        gap: 8px;
+      }
+    
+      .footer .copyright-list a {
         font-size: 16px;
+      }
+
+      .footer .copyright-list a:hover {
         color: var(--secondary);
     }
+
   }
