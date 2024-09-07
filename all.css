@@ -14,7 +14,7 @@
 /* base */ 
 *, *::after,*::before{
     box-sizing:border-box;
-    outline:solid 1px;
+    /*outline:solid 1px; 格線檢視*/
 }
 
 .body{
@@ -42,9 +42,8 @@ img{
     padding-right: 12px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 576px) { 
     .container {
-      /* max-width: 372px; */
       max-width: 576px;
     }
     .container-sm {
@@ -94,6 +93,14 @@ img{
     background-color: var(--bg-dark);
 }
 
+.mb-2 {
+    margin-bottom: 8px;
+  }
+
+.gap-12 {
+    gap: 48px;
+  }
+
 /* header*/
 .header{
     color: white;
@@ -105,7 +112,8 @@ img{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
+    cursor:pointer;
+    transition: opacity 0.5s;
 }
 
 .menu-items{
@@ -125,10 +133,12 @@ img{
 
 @media (max-width: 576px) {
     .header {
-      font-size: 16px;
+        padding: 0;
+        font-size: 16px;
     }
     .container {
       flex-direction: column;
+      align-items: flex-start;
     }
     .header-logo {
       margin-right: auto;
@@ -141,11 +151,204 @@ img{
       width: 100%;
     }
   
-    .header-menu li {
+    .header-menu .menu-items {
       width: 50%;
       border: 1px solid white;
       padding: 12px 0px;
       margin: 0;
       text-align: center;
+    }
+
+    .header-menu .menu-items:hover {
+        width: 50%;
+        color: var(--secondary);
+        padding: 12px 0px;
+        margin: 0;
+        text-align: center;
+      }
+  }
+
+  /* banner */
+  .banner {
+    background-image: url("img/home-header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner-text {
+    height: 787px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--secondary);
+    line-height: 1.5;
+  }
+
+  .banner-text h3{
+    font-size: 36px;
+  }
+
+  .banner-text h1{
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .banner .banner-btn {
+    background-color: var(--bg-dark);
+    padding: 6px 12px;
+    font-size: 20px;
+    color: white;
+  }
+  
+  .banner .banner-btn:hover {
+    background-color: var(--secondary);
+    cursor:pointer;
+    transition: opacity 0.5s;
+  }
+  
+  @media (max-width: 576px) {
+    .banner {
+        background-image: url("img/home-header-sm.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    .banner-text h3 {
+      font-size: 16px;
+    }
+    .banner-text h1 {
+      font-size: 24px;
+    }
+  }
+
+ /* footer */
+ .footer {
+    background-color: var(--primary);
+    color: white;
+    padding-top: 48px;
+    padding-bottom: 32px;
+  }
+  
+  .footer-header {
+    border-bottom: 1px solid white;
+    margin-bottom: 32px;
+  }
+  
+  .footer .nav {
+    padding: 12px 0;
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+
+  .footer .nav a:hover{
+    color: var(--secondary);
+  }
+  
+  .footer .contact-me {
+    margin-bottom: 32px;
+    font-size: 36px;
+  }
+  
+  .contact-me svg{
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+
+  .contact-me a:hover{
+    color: var(--secondary);
+  }
+  
+  .copyright-text{
+    font-size: 16px;
+  }
+  
+  .footer .social-list {
+    gap: 32px;
+  }
+
+  .footer .social-list img {
+    width: 48px;
+    transition:1s  /*複習主線任務二按鈕與陰影-滑入緩衝發光效果製作*/
+  }
+  
+  .footer .social-list img:hover{ 
+    /*複習主線任務二按鈕與陰影製作-滑入發光優化使用者體驗效果製作*/
+    box-shadow: 0px 0px 10px 3px rgba(251, 242, 242, 0.9);
+    border-radius: 25px;
+  }
+  
+  
+  .footer .copyright-list {
+    gap: 48px;
+  }
+  
+  .footer .copyright-list a {
+    padding: 0, 24px;
+    font-size: 14px;
+  }
+
+  .footer .copyright-list a:hover {
+    color: var(--secondary);
+}
+
+  @media (max-width: 767px) {
+     /* 傑利助教：767px以下轉為手機版，建議使用在元素較多的內容上，例如此次設計稿的 footer*/
+    .footer {
+      padding: 24px 0;
+    }
+    .footer-header {
+      margin-bottom: 20px;
+    }
+  
+    .footer .nav {
+      display: none;
+    }
+  
+    .footer .contact-me {
+      margin-bottom: 20px;
+      font-size: 16px;
+      align-items: center;
+    }
+
+    .contact-me svg{
+        width:  18px;
+        height: 18px;
+    }
+  
+    .footer .social-list {
+      gap: 8px;
+    }
+  
+    .footer .social-list img {
+      width: 24px;
+    }
+  
+    .footer .copyright {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .copyright-text{
+        margin-bottom: 8px;
+      }
+  
+    .footer .copyright-list {
+      flex-direction: column;
+      align-items: start;
+      gap: 8px;
+    }
+  
+    .footer .copyright-list a {
+        font-size: 16px;
+    }
+
+    .footer .copyright-list a:hover {
+        font-size: 16px;
+        color: var(--secondary);
     }
   }
