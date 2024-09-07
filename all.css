@@ -14,7 +14,7 @@
 /* base */ 
 *, *::after,*::before{
     box-sizing:border-box;
-    /*outline:solid 1px; 格線檢視*/
+    outline:solid 1px; /*格線檢視*/
 }
 
 .body{
@@ -67,24 +67,6 @@ img{
     margin-right: 64px;
   }
 
-.col{
-    padding-left:12px;
-    padding-right: 12px;
-}
-
-.row{
-    margin-left: -12px;
-    margin-right: -12px;
-}
-
-.mt-auto{
-    margin-top: auto;
-}
-
-.text-center{
-    text-align: center;
-}
-
 .bg-red-light{
     background-color: var(--bg-light);
 }
@@ -109,9 +91,6 @@ img{
 .header-log{
     padding: 16px 0; 
     width: 80px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     cursor:pointer;
     transition: opacity 0.5s;
 }
